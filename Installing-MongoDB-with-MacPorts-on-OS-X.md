@@ -19,9 +19,14 @@ sudo mkdir -p /opt/local/var/db/mongodb_data
 sudo mkdir -p /opt/local/var/log/mongodb/
 ```
 
+## Make a config directory
+```
+sudo mkdir -p /opt/local/etc/mongodb/
+```
+
 ## Create configuration file
 ```
-sudo pico /opt/local/etc/mongodb/mongod.conf
+sudo vim /opt/local/etc/mongodb/mongod.conf
 ```
 
 Enter the following if the file is blank and hit ctrl+x and save the file.
@@ -47,11 +52,13 @@ logappend = true
 
 It will alow to run `mongostart` and `mongostop` to manually start and stop the mongodb instance.
 
-At the Terminal, enter `sudo pico ~/.profile` and add the following to the end of the file. When done hit ctrl+x and save the file:
+`sudo vim ~/.bash_profile` and append following script to the end of the file.
 
 ```
+# Custom mongostart scripts starting mongo with configuration file
 alias mongostart="sudo mongod -f /opt/local/etc/mongodb/mongod.conf"
- 
+
+# Custom mongostop alias killing mongo process
 mongostop_func () {
    local mongopid=`less /opt/local/var/db/mongodb_data/mongod.lock`;
    if [[ $mongopid =~ [[:digit:]] ]]; then
@@ -61,15 +68,14 @@ mongostop_func () {
        echo mongo process $mongopid not exist;
    fi
 }
-
 alias mongostop="mongostop_func"
 ```
+
+Lastly execute `source ~/.bash_profile` from the terminal
+
 
 ## Start MongoDB 
 
  - Use `mongostart` from the Terminal to **start** mongo 
  - Use `mongostop` to **stop** it
 
-## Test that MongoDB
-
-Visit `http://localhost:28017/` in a web browser. You should see a dashboard summarizing the running instance.

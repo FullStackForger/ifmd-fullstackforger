@@ -25,10 +25,11 @@ echo -e "\n# Activate nvm\nsource ~/.nvm/nvm.sh" >> ~/.bash_profile
 ## NodeJS
 
 ### Using Node 0.10.32
-Install node using NVM 
+Install and use node using NVM 
 
 ```
 nvm install 0.10.32
+nvm use v0.10.32
 ```
 
 ### Linking node 
@@ -55,7 +56,7 @@ sudo chmod 755 /usr/bin/node
 
 Create alias to make sure command always points to the right script
 ```
-echo -e "\n# Alias to custom (nvm based) node script\nalias node="/usr/bin/node\"" >> ~/.bash_profile
+echo -e "\n# Alias to custom (nvm based) node script\nalias node=\"/usr/bin/node\"" >> ~/.bash_profile
 ```
 
 Lastly source your `~/.bash_profile` executing below command from terminal
