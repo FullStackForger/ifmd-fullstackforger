@@ -7,6 +7,6 @@
 
 ## Useful links 
 
-Bitbucket [Markdown Demo](https://bitbucket.org/tutorials/markdowndemo/)
+ - [Bitbucket Markdown tutorial and docs](https://bitbucket.org/tutorials/markdowndemo/)
 
 
