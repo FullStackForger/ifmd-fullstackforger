@@ -10,7 +10,7 @@
  [local-dev-env-0]: Installing-MongoDB-with-MacPorts-on-OS-X.md)
 
  - [Useful Development OSX Tools and Applications][useful-dev-tools]
-[useful-dev-tools](Useful-Development-OSX-Tools-and-Applications.md)
+[useful-dev-tools]: Useful-Development-OSX-Tools-and-Applications.md
 
 ## Useful links 
 
