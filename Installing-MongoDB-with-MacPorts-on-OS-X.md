@@ -1,4 +1,4 @@
-#Installing MongoDB with MacPorts on OS-X 
+# Installing MongoDB with MacPorts on OS-X 
 
 1. **Install mongodb** with `sudo port install mongodb`
 2. **Make a data directory** with `sudo mkdir -p /opt/local/var/db/mongodb_data`
@@ -7,7 +7,7 @@
 
  Enter the following if the file is blank and hit ctrl+x and save the file.
 
- ```
+ ```bash
  # configuration file /opt/local/etc/mongodb/mongod.conf
 
  # Store data alongside MongoDB instead of the default, /data/db/
