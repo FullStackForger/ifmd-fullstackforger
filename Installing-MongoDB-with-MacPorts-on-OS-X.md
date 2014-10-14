@@ -1,5 +1,7 @@
 # Installing MongoDB with MacPorts on OS-X 
 
+This is step by step guide on how to locally set up MongoDB on OS-X
+
 [Back to Index](Index.md)
 
 ## Install mongodb
