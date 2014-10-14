@@ -31,6 +31,38 @@ Install node using NVM
 nvm install 0.10.32
 ```
 
+### Linking node 
+
+From terminal open `sudo vim /usr/bin/node`, provide password if requested, press `[i]` to switch to `insert` mode and paste below code
+
+```
+if [[ "$NVM_BIN" ]]
+then
+  com="$NVM_BIN/node"
+else
+  com="/Users/Marek/.nvm/v0.10.32/bin/node"
+fi
+$com $@
+#/Users/Marek/.nvm/v0.10.32/bin/node $@
+```
+
+Press `[esc]` to exit edit mode and type `:wq` to save and exit.
+
+Make sure file has right privilages assigned
+```
+sudo chmod 755 /usr/bin/node
+```
+
+Create alias to make sure command always points to the right script
+```
+alias node="/usr/bin/node"
+```
+
+Lastly source your `~/.bash_profile` executing below command from terminal
+```
+source ~/.bash_profile
+```
+
 ### Node Packages
 
 Install following packages
