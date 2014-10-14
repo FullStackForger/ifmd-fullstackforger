@@ -2,7 +2,7 @@
 
 Below is list of useful tools, which is used as a **Development Toolkit** at [rusticode.com](http://rusticode.com)
 
-[Back to Index](Index.md)
+[Back to Wiki Homepage](Home.md)
 
 ### MuCommander
 
