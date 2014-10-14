@@ -7,22 +7,24 @@
 
  Enter the following if the file is blank and hit ctrl+x and save the file.
 
- ```bash
- # configuration file /opt/local/etc/mongodb/mongod.conf
+```
+#!bash
 
- # Store data alongside MongoDB instead of the default, /data/db/
- dbpath = /opt/local/var/db/mongodb_data
+# configuration file /opt/local/etc/mongodb/mongod.conf
 
- # Only accept local connections
+# Store data alongside MongoDB instead of the default, /data/db/
+dbpath = /opt/local/var/db/mongodb_data
+
+# Only accept local connections
  bind_ip = 127.0.0.1
 
- # Running as daemon
- fork = true
+# Running as daemon
+fork = true
 
- # Take log
- logpath = /opt/local/var/log/mongodb/mongodb.log
- logappend = true
- ```
+# Take log
+logpath = /opt/local/var/log/mongodb/mongodb.log
+logappend = true
+```
 
 5. **Create startup alias** for your terminal profile so that you can run `mongostart` and `mongostop` to manually start and stop the mongodb instance.
 
