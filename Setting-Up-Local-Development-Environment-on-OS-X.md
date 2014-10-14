@@ -55,7 +55,7 @@ sudo chmod 755 /usr/bin/node
 
 Create alias to make sure command always points to the right script
 ```
-alias node="/usr/bin/node"
+echo -e "\n# Alias to custom (nvm based) node script\nalias node="/usr/bin/node\"" >> ~/.bash_profile
 ```
 
 Lastly source your `~/.bash_profile` executing below command from terminal
