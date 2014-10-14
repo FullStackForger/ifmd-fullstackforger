@@ -3,7 +3,11 @@
 
 ## Documents
 
- - [Installing-MongoDB-with-MacPorts-on-OS-X](Installing-MongoDB-with-MacPorts-on-OS-X.md)
+ - [Installing-MongoDB-with-MacPorts-on-OS-X][installing-mongo-0]
+[installing-mongo-0]: Installing-MongoDB-with-MacPorts-on-OS-X.md
+
+ - [Setting up Local Development Environment on OSX][local-dev-env-0]
+ [local-dev-env-0]: Installing-MongoDB-with-MacPorts-on-OS-X.md)
 
 ## Useful links 
 
