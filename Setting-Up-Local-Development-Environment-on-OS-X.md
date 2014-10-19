@@ -20,6 +20,11 @@ cd ~/.nvm
 git checkout `git describe --abbrev=0 --tags`
 source ~/.nvm/nvm.sh
 echo -e "\n# Activate nvm\nsource ~/.nvm/nvm.sh" >> ~/.bash_profile
+echo -e "\n# Bash completion for nvm\n[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion" >> ~/.bash_profile
+```
+
+```
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 ```
 
 ## NodeJS
@@ -32,9 +37,16 @@ nvm install 0.10.32
 nvm use v0.10.32
 ```
 
-### Linking node 
+### Linking node (optional)
 
-From terminal open `sudo vim /usr/bin/node`, provide password if requested, press `[i]` to switch to `insert` mode and paste below code
+If you don't want to be forced to use `nvm use [node_version]` after every reboot you might want to add that into `~/.bash_profile` file. Alternatively you might create executable script that will detect node version executing default if there is none in use.
+
+From terminal open 
+```
+sudo vim /usr/bin/node
+```
+
+Provide password if prompted, press `[i]` to switch to `insert` mode and paste below code.
 
 ```
 if [[ "$NVM_BIN" ]]
