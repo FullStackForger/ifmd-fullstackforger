@@ -1,5 +1,5 @@
 # Setting up Local Development Environment on OSX (Mavericks 10.9)
-test
+
 This is step by step guide on how to set up local OSX Development Environment used at [Rusticode.com](http://rusticode.com)
 
 [Back to Wiki Homepage](Home.md)
