@@ -71,3 +71,18 @@ MySQL databse management for Mac OSX
 Download and install pkg file from [www.sequelpro.com](http://www.sequelpro.com/)
 
 
+### Better Snap Tool
+
+Shortcuts to configure
+
+```
+Cmd + alt + opt + {key}
+```
+
+Keys:
+```
+Y U I < top -left -center -right
+H J K < middle -left -center -right
+N M , < bottom -left -center -right
+SPACE < center
+```
