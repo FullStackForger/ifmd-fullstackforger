@@ -37,6 +37,10 @@ echo ""
 
 Press `[esc]` to exist `editing` mode and type `:wq` and confirm with Enter to save changes.
 
+## XCode 
+
+OS X Yosemite and Xcode 6 [installation guide][https://developer.apple.com/osx/]
+
 ## Mack Ports
 
 Download and install pkg file from [mackports.org](https://www.macports.org/install.php)
