@@ -39,7 +39,7 @@ Press `[esc]` to exist `editing` mode and type `:wq` and confirm with Enter to s
 
 ## XCode 
 
-OS X Yosemite and Xcode 6 [installation guide][https://developer.apple.com/osx/]
+OS X Yosemite and Xcode 6 [installation guide](https://developer.apple.com/osx)
 
 ## Mack Ports
 
