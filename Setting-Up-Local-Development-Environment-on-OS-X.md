@@ -179,10 +179,10 @@ if [[ "$NVM_BIN" ]]
 then
   com="$NVM_BIN/node"
 else
-  com="/Users/Marek/.nvm/v0.10.32/bin/node"
+  com="/Users/Marek/.nvm/v0.10.35/bin/node"
 fi
 $com $@
-#/Users/Marek/.nvm/v0.10.32/bin/node $@
+#/Users/Marek/.nvm/v0.10.35/bin/node $@
 ```
 
 Press `[esc]` to exit edit mode and type `:wq` to save and exit.
