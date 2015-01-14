@@ -155,12 +155,12 @@ echo -e "\n# Bash completion for nvm\n[[ -r $NVM_DIR/bash_completion ]] && . $NV
 
 ## NodeJS
 
-### Using Node 0.10.32
+### Using Node 0.10.35
 Install and use node using NVM 
 
 ```
-nvm install 0.10.32
-nvm use v0.10.32
+nvm install 0.10.35
+nvm use v0.10.35
 ```
 
 ### Linking node (optional)
