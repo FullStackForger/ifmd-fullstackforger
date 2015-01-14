@@ -9,19 +9,14 @@ This is step by step guide on how to locally set up MongoDB on OS-X
 sudo port install mongodb
 ```
 
-## Make a data directory
+## Create directories
 ```
+# Make data directory
 sudo mkdir -p /opt/local/var/db/mongodb_data
-```
-
-## Make a logs directory
-```
-sudo mkdir -p /opt/local/var/log/mongodb/
-```
-
-## Make a config directory
-```
-sudo mkdir -p /opt/local/etc/mongodb/
+# Make logs directory
+sudo mkdir -p /opt/local/var/log/mongodb
+# Make config directory
+sudo mkdir -p /opt/local/etc/mongodb
 ```
 
 ## Create configuration file
