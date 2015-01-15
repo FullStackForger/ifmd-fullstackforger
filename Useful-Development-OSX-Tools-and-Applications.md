@@ -4,6 +4,13 @@ Below is list of useful tools, which is used as a **Development Toolkit** at [ru
 
 [Back to Wiki Homepage](Home.md)
 
+### IntelliJ IDEA
+
+#### IDEA 13.1
+
+IDEA 13.1 requires installing [Java SDK 1.6](http://support.apple.com/kb/DL1572)
+IDEA 13.1 [download](https://confluence.jetbrains.com/display/IntelliJIDEA/Previous+IntelliJ+IDEA+Releases)
+
 ### MuCommander
 
 Download and install pkg file from [www.mucommander.com](http://www.mucommander.com/)
