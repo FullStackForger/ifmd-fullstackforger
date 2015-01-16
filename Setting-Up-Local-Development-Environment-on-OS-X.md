@@ -41,6 +41,14 @@ Press `[esc]` to exist `editing` mode and type `:wq` and confirm with Enter to s
 
 OS X Yosemite and Xcode 6 [installation guide](https://developer.apple.com/osx)
 
+### XCode Command Line Tools
+
+XCode Command Line Tools are required by mac-ports
+
+```
+xcode-select --install
+```
+
 ## Mack Ports
 
 Download and install pkg file from [mackports.org](https://www.macports.org/install.php)
