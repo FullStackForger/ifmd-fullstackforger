@@ -54,8 +54,8 @@ To install plugin open below links, scroll down to installation section and foll
 To be able to run Sublime from command line create a symlink
 
 ```
-echo -e "\n# Sublime alias" >> ~/.bash_profile
-echo "alias subl=\"/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl\"" >> ~/.bash_profile
+echo -e "\n# Sublime 2.x alias" >> ~/.bash_profile
+echo "alias subl=\"/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl\"" >> ~/.bash_profile
 ```
 
 To open file type 
