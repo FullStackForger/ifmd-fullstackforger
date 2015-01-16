@@ -36,16 +36,23 @@ Download and install pkg file from [iterm2.com](http://iterm2.com/)
 
 Used mainly for Markdown Documents editing, quick look into a folder with terminal command `subl .`, previewing text files
 
-#### Installation
+#### Editor Installation
 
 Download and install sublime from [official page](http://www.sublimetext.com/3)
+
+#### Plugin Installation
 
 Then follow steps from below link to install Sublime Package Control 
 https://sublime.wbond.net/installation
 
-#### Installing plugins 
+Open console with `[crl + ``]` and paste installation python code from 
+the link above.
 
-To install plugin open below links, scroll down to installation section and follow all the steps
+#### Markdown Plugins
+
+To open isntallation palette hit `cmd + shift + p` and type `install package`.
+
+To install plugin manually follow instruction from plugin page.
  - [Markdown Editing](https://sublime.wbond.net/packages/MarkdownEditing)
  - [Markdown Preview](https://sublime.wbond.net/packages/Markdown%20Preview)
 
