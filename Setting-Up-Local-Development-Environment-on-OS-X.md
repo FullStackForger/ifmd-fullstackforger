@@ -144,7 +144,8 @@ Resources: some have been borrowed from [durn.com](http://durdn.com/blog/2012/11
 
 ```
 git config --global alias.alias "config --get-regexp ^alias\." | sort
-
+#git config --global user.name "User Name"
+#git config --global user.email username@email.com
 ```
 
 ## Node Package Manager ( NVM )
