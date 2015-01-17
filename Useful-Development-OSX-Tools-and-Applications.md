@@ -30,6 +30,10 @@ iTerm2 is a replacement for Terminal and the successor to iTerm.
 Download and install pkg file from [iterm2.com](http://iterm2.com/)
 
 
+### FileZilla
+
+Download and and install from [official site](https://filezilla-project.org/download.php?type=client)
+
 ### Sublime (version 2.2)
 
 #### Usage 
