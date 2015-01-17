@@ -4,13 +4,13 @@
 ## Documents
 
  - [Setting up Local Development Environment on OSX][local-dev-env-0]
- [local-dev-env-0]: Setting-Up-Local-Development-Environment-on-OS-X.md
+ [local-dev-env-0]: setting-up-local-development-environment-on-osx.md
 
- - [Installing-MongoDB-with-MacPorts-on-OS-X][installing-mongo-0]
-[installing-mongo-0]: Installing-MongoDB-with-MacPorts-on-OS-X.md
+ - [Installing MongoDB with MacPorts on OSX][installing-mongo-0]
+[installing-mongo-0]: installing-mongodb-with-macports-on-osx.md
 
  - [Useful Development OSX Tools and Applications][useful-dev-tools]
-[useful-dev-tools]: Useful-Development-OSX-Tools-and-Applications.md
+[useful-dev-tools]: useful-development-osx-tools-and-applications.md
 
 ## Useful links 
 
