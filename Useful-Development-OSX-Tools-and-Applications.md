@@ -105,3 +105,10 @@ H J K < middle -left -center -right
 N M , < bottom -left -center -right
 SPACE < center
 ```
+
+### Slowy 
+
+Real-world connection simulator and bandwidth limiter 
+
+Download and install from [slowy site](http://slowyapp.com/download)
+
