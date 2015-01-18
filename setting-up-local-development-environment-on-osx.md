@@ -176,6 +176,8 @@ nvm use v0.10.35
 
 If you don't want to be forced to use `nvm use [node_version]` after every reboot you might want to add that into `~/.bash_profile` file. Alternatively you might create executable script that will detect node version executing default if there is none in use.
 
+#### Link node
+
 From terminal open 
 ```
 sudo vim /usr/bin/node
@@ -201,14 +203,31 @@ Make sure file has right privilages assigned
 sudo chmod 755 /usr/bin/node
 ```
 
-Create alias to make sure command always points to the right script
+#### Link Node Package Manager (NPM)
+
+From terminal open 
 ```
-echo -e "\n# Alias to custom (nvm based) node script\nalias node=\"/usr/bin/node\"" >> ~/.bash_profile
+sudo vim /usr/bin/npm
 ```
 
-Lastly source your `~/.bash_profile` executing below command from terminal
+Provide password if prompted, press `[i]` to switch to `insert` mode and paste below code.
+
 ```
-source ~/.bash_profile
+if [[ "$NVM_BIN" ]]
+then
+  com="$NVM_BIN/npm"
+else
+  com="/Users/$USER/.nvm/v0.10.35/bin/npm"
+fi
+$com $@
+#/Users/$USER/.nvm/v0.10.35/bin/npm $@
+```
+
+Press `[esc]` to exit edit mode and type `:wq` to save and exit.
+
+Make sure file has right privilages assigned
+```
+sudo chmod 755 /usr/bin/npm
 ```
 
 ### Node Packages
