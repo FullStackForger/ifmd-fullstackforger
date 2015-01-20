@@ -11,6 +11,8 @@
 [installing-mongo-0]: installing-mongodb-with-macports-on-osx.md
 - [Setting up Local Development Environment on OSX][local-dev-env-0]
 [local-dev-env-0]: setting-up-local-development-environment-on-osx.md
+- [Setting Up Unity3d Environment on OSX][setting-up-unity3d-osx]
+[setting-up-unity3d-osx]: setting-up-unity3d-environment-on-osx.md
 - [Useful Development OSX Tools and Applications][useful-dev-tools]
 [useful-dev-tools]: useful-development-osx-tools-and-applications.md
 - [Useful Resources for web application development][useful-resources-web]
