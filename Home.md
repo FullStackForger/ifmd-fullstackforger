@@ -1,4 +1,3 @@
-
 # Rusticode Wiki Home Page
 
 ## Documents
