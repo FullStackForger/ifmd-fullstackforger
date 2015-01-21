@@ -222,7 +222,7 @@ Save changes and reload NginX
 sudo port unload nginx && sudo port load nginx
 ```
 If everything is set up properly you should see 'Welcome!' when
-you open 'http://dev.localhost' in your browser.
+you open http://dev.localhost in your browser.
 
 ## Sources:
 - [launchctl interface](http://ss64.com/osx/launchctl.html)
