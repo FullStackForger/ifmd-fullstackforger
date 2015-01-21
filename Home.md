@@ -8,6 +8,8 @@
 [gitignore-for-unity]: gitignore-for-unity3d-with-visual-studio.md
 - [Installing MongoDB with MacPorts on OSX][installing-mongo-0]
 [installing-mongo-0]: installing-mongodb-with-macports-on-osx.md
+- [Installing NginX on OSX with MacPorts for NodeJS][installing-nginx-onosx]
+[installing-nginx-onosx]: installing-nginx-on-osx-with-macports-for-nodejs.md
 - [Setting up Local Development Environment on OSX][local-dev-env-0]
 [local-dev-env-0]: setting-up-local-development-environment-on-osx.md
 - [Setting Up Unity3d Environment on OSX][setting-up-unity3d-osx]
