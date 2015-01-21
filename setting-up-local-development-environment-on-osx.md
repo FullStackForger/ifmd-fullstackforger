@@ -244,7 +244,7 @@ Links do those npm packages
 
 ## MongoDB
 
-To insall MondoDB folllow [Installing MongoDB with MacPorts on OS-X](Installing-MongoDB-with-MacPorts-on-OS-X.md)
+To insall MondoDB folllow [Installing MongoDB with MacPorts on OSX](installing-mongodb-with-macports-on-osx.md)
 
 ## NginX
-
+To install NginX follow [Installing NginX on OSX with configuration for NodeJS](installing-nginx-on-osx-with-configuration-for-nodejs.md).
