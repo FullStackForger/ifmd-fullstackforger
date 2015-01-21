@@ -8,6 +8,8 @@ From the console run `sudo port selfupdate` to update Mack Ports
 
 ## NginX installation with MacPorts
 
+### Main NginX configuration
+
 To list full range of all available extensions/options execute:
 
 ```
@@ -81,29 +83,51 @@ http {
         error_page  500 502 503 504  /50x.html;
     }
 
-    map $scheme $fastcgi_https {
-       default off;
-       https on;
-    }
-
     # Virtual Host Configs
+    include node-apps.conf
     include conf.d/*.conf;
     include sites-enabled/*;
 }
 ```
 Save and exit with `[esc]` and `:wq` command.
 
-The correct way to start/stop Nginx with MacPorts:
+### NginX config for Node Apps
 
-Start Nginx with: 
+Now create `node-apps.conf` for your node applications:
 ```
-sudo port load nginx
+vim /opt/local/etc/nginx/node-apps.conf
 ```
+
+Paste below configuration into the open file
+```
+# Reverse proxy definitions to services
+include node-upstreams/*.conf;
+
+server {
+    listen       80;
+    server_name  dev.*;
+    client_max_body_size 1000M;
+
+    # Endpoint mappings
+    include node-endpoints/*.conf;
+
+    error_page  404              /404.html;
+    error_page  500 502 503 504  /50x.html;
+}
+```
+
+### NginX restarting
 
 Stop Nginx with:
 ```
 sudo port unload nginx
 ```
+
+Start Nginx with: 
+```
+sudo port load nginx
+```
+### NginX auto start upon machine start
 
 If you want nginx auto start after machine reboot run:
 ```
