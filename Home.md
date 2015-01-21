@@ -17,6 +17,10 @@
 - [Useful Resources for web application development][useful-resources-web]
 [useful-resources-web]: useful-resources-for-web-application-development.md
 
+### Troubleshooting
+- [Unresolved function or method require()][unresolved-function-require]
+[unresolved-function-require]: unresolved-function-or-method-require-in-intellij-idea.md
+
 ## Useful links 
 
 - [Bitbucket Markdown tutorial and docs](https://bitbucket.org/tutorials/markdowndemo/)
