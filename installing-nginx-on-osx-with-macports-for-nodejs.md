@@ -8,7 +8,7 @@ From the console run `sudo port selfupdate` to update Mack Ports
 
 ## NginX installation with MacPorts
 
-### Main NginX configuration
+### NginX installation
 
 To list full range of all available extensions/options execute:
 
@@ -22,6 +22,11 @@ To install with ssl extension and redis [cashing](http://wiki.nginx.org/HttpRedi
 
 ```
 sudo port install nginx +ssl +redis
+```
+
+### NginX setup
+
+```
 cd /opt/local/etc/nginx
 #Folders for Virtual Host configs
 sudo mkdir conf.d 
@@ -68,53 +73,12 @@ http {
 
     # access_log /var/log/nginx/access.log main buffer=32k;
 
-    # Reverse proxy definitions to services
-    include node-upstreams/*.conf;
-
-    server {
-        listen       80;
-        server_name  dev.*;
-        client_max_body_size 1000M;  
-
-        # Endpoint mappings
-        include node-endpoints/*.conf;
-
-        error_page  404              /404.html;
-        error_page  500 502 503 504  /50x.html;
-    }
-
     # Virtual Host Configs
-    include node-apps.conf
     include conf.d/*.conf;
     include sites-enabled/*;
 }
 ```
 Save and exit with `[esc]` and `:wq` command.
-
-### NginX config for Node Apps
-
-Now create `node-apps.conf` for your node applications:
-```
-vim /opt/local/etc/nginx/node-apps.conf
-```
-
-Paste below configuration into the open file
-```
-# Reverse proxy definitions to services
-include node-upstreams/*.conf;
-
-server {
-    listen       80;
-    server_name  dev.*;
-    client_max_body_size 1000M;
-
-    # Endpoint mappings
-    include node-endpoints/*.conf;
-
-    error_page  404              /404.html;
-    error_page  500 502 503 504  /50x.html;
-}
-```
 
 ### NginX restarting
 
@@ -127,6 +91,7 @@ Start Nginx with:
 ```
 sudo port load nginx
 ```
+
 ### NginX auto start upon machine start
 
 If you want nginx auto start after machine reboot run:
@@ -192,15 +157,46 @@ server.route({
 server.start();
 ```
 
+Start server with
+```
+node index.js
+```
+
 Navigate to `http://localhost:3000` and you should see 'Welcome!'.
 
+
 ## Configuring nginx domain name for node application
+
+### NginX configig for simple node app available from dev.localhost
+
+Create `dev.localhost` file for your node applications:
+```
+sudo vim /opt/local/etc/nginx/sites-available/dev.localhost
+```
+
+Paste below configuration into the open file
+```
+# Reverse proxy definitions to services
+include node-upstreams/dev.localhost.conf;
+
+server {
+    listen       80;
+    server_name  dev.localhost;
+    client_max_body_size 1000M;
+
+    # Endpoint mappings
+    include node-endpoints/dev.localhost.conf;
+
+    error_page  404              /404.html;
+    error_page  500 502 503 504  /50x.html;
+}
+```
 
 ### Create NginX upstream
 
 Create Simple Node App upstream
 ```
-sudo vim /opt/local/etc/nginx/node-upstreams/simple-node-app.conf
+sudo vim /opt/local/etc/nginx/node-upstreams/dev.localhost.conf
 ```
 
 Paste below configuration into it
@@ -215,7 +211,7 @@ upstream simple-node-app {
 
 Create Simple Node app end-point
 ```
-sudo vim /opt/local/etc/nginx/node-endpoints/simple-node-app.conf
+sudo vim /opt/local/etc/nginx/node-endpoints/dev.localhost.conf
 ```
 
 Paste below configuration into it
@@ -229,7 +225,7 @@ location / {
 }
 ```
 
-### Update `hosts` file and reload NginX
+### Update `hosts` file 
 
 Open `hosts` file
 ```
@@ -241,7 +237,13 @@ And add mapping hostname to local ip address:
 127.0.0.1   dev.localhost
 ```
 
-Save changes and reload NginX
+### Enable http://dev.localhost
+```
+cd /opt/local/etc/nginx/sites-enabled/
+sudo ln -s ../sites-available/dev.localhost dev.localhost
+```
+
+### Reload NginX
 ```
 sudo port unload nginx && sudo port load nginx
 ```
