@@ -20,8 +20,8 @@
 [useful-resources-web]: useful-resources-for-web-application-development.md
 
 ### Troubleshooting
-- [Unresolved function or method require()][unresolved-function-require]
-[unresolved-function-require]: unresolved-function-or-method-require-in-intellij-idea.md
+- [Error: ValidationError: value must be one of null (Hapi Joi)](troublesooting/validation-error-value-must-be-one-of-null-hapi-joi.md)
+- [Unresolved function or method require()](troubleshooting/unresolved-function-or-method-require-in-intellij-idea.md)
 
 ## Useful links 
 
