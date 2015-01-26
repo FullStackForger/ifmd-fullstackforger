@@ -23,6 +23,9 @@
 - [Error: ValidationError: value must be one of null (Hapi Joi)](troublesooting/validation-error-value-must-be-one-of-null-hapi-joi.md)
 - [Unresolved function or method require()](troubleshooting/unresolved-function-or-method-require-in-intellij-idea.md)
 
+### Guides
+- [Crash Course in MongoDB Shell (Mongo CLI in a nutshell)](guides/crash-course-in-mongodb-shell-mongo-cli-in-a-nutshell.md)
+
 ## Useful links 
 
 - [Bitbucket Markdown tutorial and docs](https://bitbucket.org/tutorials/markdowndemo/)
