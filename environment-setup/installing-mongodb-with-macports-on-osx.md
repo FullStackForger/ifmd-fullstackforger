@@ -43,10 +43,19 @@ logpath = /opt/local/var/log/mongodb/mongodb.log
 logappend = true
 ```
 
-### auto start Mongo upon machine start/restart
+### Auto start Mongo upon machine start/restart
 
-If you want nginx auto start after machine reboot run:
+Mongo won't start after machine restart by default. 
+
+If you want nginx auto start after machine reboot, first reate mongo launch daemon configuration downloading config gist `/Library/LaunchDaemons/org.mongodb.mongod.plist`
+
 ```
+sudo wget -O /Library/LaunchDaemons/org.mongodb.mongod.plist  https://gist.githubusercontent.com/rusticode/7d4786b617c53c963560/raw
+```
+
+Now use `launchctl` to load mongo jobs.
+```
+sudo launchctl load -w /Library/LaunchDaemons/org.mongodb.mongod.plist
 sudo launchctl load -w /Library/LaunchDaemons/org.macports.mongodb.plist
 ```
 
