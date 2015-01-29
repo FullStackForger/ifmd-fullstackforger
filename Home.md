@@ -26,6 +26,10 @@
 ### Guides
 - [Crash Course in MongoDB Shell (Mongo CLI in a nutshell)](guides/crash-course-in-mongodb-shell-mongo-cli-in-a-nutshell.md)
 
+### Hapi App
+
+- [Improved code readibility with promises and hapi app model](improved-code-readibility-with-promises-and-happi-app-model.md)
+
 ## Useful links 
 
 - [Bitbucket Markdown tutorial and docs](https://bitbucket.org/tutorials/markdowndemo/)
