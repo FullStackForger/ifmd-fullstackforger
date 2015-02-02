@@ -21,6 +21,7 @@
 
 ### Troubleshooting
 - [Error: ValidationError: value must be one of null (Hapi Joi)](troublesooting/validation-error-value-must-be-one-of-null-hapi-joi.md)
+- [WARNING: soft rlimits too low](troublesooting/mongo-soft-rlimits-too-low-server-startup-warning.md)
 - [Unresolved function or method require()](troubleshooting/unresolved-function-or-method-require-in-intellij-idea.md)
 
 ### Guides
