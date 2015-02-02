@@ -31,18 +31,24 @@ That is why it is good idea to create startup plist config.
 
 Just wget [this gist](https://gist.github.com/rusticode/365f3489b5ed51574363) with command below or manualy create file '/Library/LaunchDaemons/my.startup.environment.plist' copying gist content.
 ```
-sudo wget -O /Library/LaunchDaemons/my.startup.environment.plist  https://gist.github.com/rusticode/365f3489b5ed51574363/raw
+sudo wget -O /Library/LaunchDaemons/limit.maxfiles.plist https://gist.github.com/rusticode/365f3489b5ed51574363/raw
+sudo wget -O /Library/LaunchDaemons/limit.maxproc.plist https://gist.github.com/rusticode/8b5482aaa8a7d8174f6c/raw
 ```
 
 Now use `launchctl` to load mongo jobs.
 ```
-sudo launchctl load -w /Library/LaunchDaemons/my.startup.environment.plist
+sudo launchctl load -w /Library/LaunchDaemons/limit.maxfiles.plist
+sudo launchctl load -w /Library/LaunchDaemons/limit.maxproc.plist
 ```
+
+
 
 ## Resources
 
 - [ulimit command](http://ss64.com/osx/ulimit.html)
+- [launchctl command](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/launchctl.1.html)
 - [mongod mac osx rlimits warning](http://stackoverflow.com/questions/16621763/mongod-2mac-os-x-rlimits-warning)
 - [persisting ulimits on mac](https://coderwall.com/p/lfjoaq/persist-ulimit-settings-in-mac-os-x)
 - [relationship between launchctl and ulimit](http://apple.stackexchange.com/questions/116273/what-is-the-relationship-between-launchctl-limit-and-ulimit)
 - [no launchd conf on yosemity](http://stackoverflow.com/questions/25385934/setting-environment-variables-via-launchd-conf-no-longer-works-in-os-x-yosemite)
+- [open files limit](http://docs.basho.com/riak/latest/ops/tuning/open-files-limit/#Mac-OS-X)
