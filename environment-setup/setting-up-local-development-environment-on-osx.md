@@ -125,7 +125,7 @@ cd ~
 git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt
 echo -e "\n# Git bash color schemas"
 echo -e ""
-echo -e "source .bash-git-prompt/gitprompt.sh" >> ~/.bash_profile
+echo -e "source ~/.bash-git-prompt/gitprompt.sh" >> ~/.bash_profile
 source ~/.bash_profile
 ```
 
