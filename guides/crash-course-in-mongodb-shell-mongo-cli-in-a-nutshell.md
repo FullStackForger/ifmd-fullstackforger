@@ -172,13 +172,13 @@ db.users.update({ name: "Tom Smith" }, { name: "Tommy Smith" })
 
 #### Update one record with multiple update operations
 
-Field `name` will be remaned to `full_name` and new field `name` name will be added.
+Field `name` will be remaned to `full_name` and new field `nick` name will be added.
 ```
 db.users.update(
     { name: "Eliot Thomson" }, 
     {         
         $rename : { name: "full_name" },
-        $set : { pseudo: "Ely" }
+        $set : { nick: "Ely" }
     }
 )
 ```
@@ -271,7 +271,7 @@ Read Operations
 
 ##### Comments
 
-- `$comment` - appends a comment to a query predicate
+- `$comment` - appends a comment to a query predicate. Useful for log entries.
 
 
 #### Document selecting examples
@@ -343,6 +343,7 @@ db.users.find({ $and : [
     { scores: { $not : { $elemMatch: { $lt: 30 } } } },
 ]})
 ```
+**note:** `$and` queries are evaluate in order. Following query is evaluated only previous query returns results
 
 ### Projecting selected document
 
@@ -361,9 +362,6 @@ db.users.find({}, {scores: 1})
 ```
 
 ##### Exclude specified field from results
-
-> **note:** `_id` field **can not** be excluded
-
 ```
 db.users.find({}, {scores: 0})
 ```
