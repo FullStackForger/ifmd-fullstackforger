@@ -274,6 +274,53 @@ Read Operations
 - `$comment` - appends a comment to a query predicate. Useful for log entries.
 
 
+#### Projections
+
+**Resources:** Official docs to [projections](http://docs.mongodb.org/v2.6/core/read-operations-introduction/#projections)
+
+##### Showing, hiding fields 
+```
+{<fieldname>: 0, <fieldname>: 1}
+```
+`_id` field is included in the results by default, but it can be suppressed with `{id: 0}`
+
+
+##### Projecting array type fields with operators
+
+###### element matching operator [$elemMatch](http://docs.mongodb.org/v2.6/reference/operator/projection/elemMatch/#proj._S_elemMatch)
+
+```
+db.<collection>.find({}, {<fieldname>: { $elemMatch: {<fieldname>: <value>}}}
+```
+
+###### slicing operator [$slice](http://docs.mongodb.org/v2.6/reference/operator/projection/slice/#proj._S_slice)
+
+```
+db.<collection>.find({}, {<fieldname>: { $slice: <number>}}`
+```
+
+Positive number returns only first n documents, negative number returns last n document
+
+###### first element positional operator [$](http://docs.mongodb.org/v2.6/reference/operator/projection/positional/#proj._S_)
+
+```
+db.<collection>.find( { <array>: <value> ... },
+                    { "<array>.$": 1 } )                    
+db.<collection>.find( { <array.field>: <value> ...},
+                    { "<array>.$": 1 } )
+```
+
+Using `$` has following limitations
+
+ - Only one positional $ operator may appear in the projection document.
+ - Only one array field may appear in the query document.
+ - The query document should only contain a single condition on the array field being projected. Multiple conditions may override each other internally and lead to undefined behavior.
+ 
+###### projection functionality in the aggregation framework pipeline
+
+ related projection functionality in the aggregation framework pipeline, should be used with [`$project`](http://docs.mongodb.org/v2.6/reference/operator/aggregation/project/#pipe._S_project)
+
+
 #### Document selecting examples
 
 ##### Find documents with existing field name
