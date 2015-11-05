@@ -67,9 +67,10 @@ http {
     default_type  application/octet-stream;
     client_max_body_size 100m;
 
-    log_format compression '[$time_local] $remote_addr - $remote_user '
+    log_format compress '$remote_addr - $remote_user [$time_local]'
                        '"$request" $status $bytes_sent '
-                       '"$http_referer" "$http_user_agent" "$gzip_ratio"';
+                       '"$http_referer" "$http_user_agent" "$gzip_ratio" '
+                       '"$http_x_forwarded_for"';
 
     # access_log /var/log/nginx/access.log main buffer=32k;
 
@@ -249,6 +250,16 @@ sudo port unload nginx && sudo port load nginx
 ```
 If everything is set up properly you should see 'Welcome!' when
 you open http://dev.localhost in your browser.
+
+
+### Tweaking `.bash_profile` for handy aliases
+
+```
+# nginx start, stop, restart aliases
+alias nginx-start="sudo launchctl load -w /Library/LaunchDaemons/org.macports.nginx.plist"
+alias nginx-stop="sudo launchctl unload -w /Library/LaunchDaemons/org.macports.nginx.plist"
+alias nginx-restart="nginx-stop; nginx-start;"
+```
 
 ## Sources:
 - [launchctl interface](http://ss64.com/osx/launchctl.html)
