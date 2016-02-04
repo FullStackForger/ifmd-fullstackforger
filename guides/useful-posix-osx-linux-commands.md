@@ -85,6 +85,12 @@ w
 sudo netstat -anltp
 ```
 
+```
+lsof -i -P | grep -i "listen"
+```
+more [lsof](http://www.thegeekstuff.com/2012/08/lsof-command-examples/) examples
+
+
 ## Users and groups
 
 ### Add user to a group

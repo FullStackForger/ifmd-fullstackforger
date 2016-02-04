@@ -1,6 +1,10 @@
 # NodeJS Microservices: 
 # Appendix 2: Resources
 
+Great tutorials
+---------------
+* [Implementing microservice architecture](http://oredev.org/2013/wed-fri-conference/implementing-micro-service-architectures) by Fred George
+
 3rd party tools and services
 ----------------------------
 __Commercial__
