@@ -1,15 +1,16 @@
 # Mackports - short guide
 
-This is super short macports guide and it is in progress. I am adding more and
+This is super short macports guide. This article is an ongoing work in progress. I am adding more and
 more stuff here every time I encounter a problem or something interesting.
+
 If you looking for full [official guide](https://guide.macports.org), just follow the link.
 
 ## Activating, deactivating packages
 
 <!-- http://stackoverflow.com/questions/4231228/macports-setting-an-install-as-active -->
 ```
-sudo port deactivate ImageMagick@6.6.5-0_0+q16
-sudo port activate  ImageMagick@6.6.4-9_0+q16
+sudo port deactivate portname@x.y.z-0_0+q1
+sudo port activate  portname@x.y.z-0_0+q2
 ```
 
 ## Uninstalling packages
