@@ -37,6 +37,7 @@ sudo port echo leaves
 
 > One of features of the 2.x version is tracking “requested” versus “unrequested” port installations. Unrequested ports are installed as a result of being a dependency for another port installation.
 > `leaves` is a pseudo-portname expanding to all the unrequested ports. It can be used to “clean up” unneeded ports skipped during uninstallation (if you forgot `--follow-dependencies` flag)
+> source: [http://apple.stackexchange.com/a/10190](http://apple.stackexchange.com/a/10190)
 
 Uninstall any remaining leaves:
 ```
