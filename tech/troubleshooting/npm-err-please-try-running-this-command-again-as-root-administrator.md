@@ -93,4 +93,6 @@ Disadvantage of that method is `npm` has been granted `sudo` permissions.
 It is not a problem if it is just you on the server, or mac but **musn't**
 be used if there is more users.
 
+## Method 4: make `npm` a `sudoer`
+
 …and voilà! There you have it.
