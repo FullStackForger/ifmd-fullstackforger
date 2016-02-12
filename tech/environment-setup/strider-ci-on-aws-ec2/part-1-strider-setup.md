@@ -1,14 +1,22 @@
+# Strider CI on AWS EC2
 # Part 1: Strider Setup
 
 
 ## Prequisites
+
+### Update host name
+Edit `/etc/hostname` appending server hostname to the top 127.0.0.1 line to prevent from `sudo` from throwing errors.
+
+You can check host name running `hostname` bash command.
+
+**source:** [Error: sudo: unable to resolve host ip-xxx-xx-xx-xxx]( /tech/troubleshooting/ubuntu-unable-to-resolve-host-ip.md)
 
 ### Installing system packages
 
 Script will install gcc compilers, node, update npm, install git and mongodb
 
 ```
-curl https://gist.githubusercontent.com/indieforger/20e345cf9dff308a7392/raw/f219d560598ca73a9a386df32b7a47bc08fb4578/setup-node-webserver.sh | bash
+curl -L https://gist.githubusercontent.com/indieforger/20e345cf9dff308a7392/raw/setup-node-webserver.sh | bash
 ```
 
 ### Installing strider
@@ -94,7 +102,7 @@ When you get to callback address, use something like:
 ```
 http://localhost:3000/auth/github/callback
 ```
-replacing `localhost:3000` with your ci url addresss. Keep page open, you will use App Client ID and App Client Secret in a minute.
+**Note: ** Remember to replace `localhost:3000` with your CI server url address. Keep page open, you will use App Client ID and App Client Secret in a minute.
 
 **Note:** This step is not required if you run strider locally
 
