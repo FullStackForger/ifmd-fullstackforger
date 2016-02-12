@@ -2,7 +2,7 @@
 
 ## Serching
 
-### Find text in file 
+### Find text in file
 Search for string recursively
 ```
 grep -R "test to find" /location/directory/
@@ -12,12 +12,12 @@ grep -R "test to find" /location/directory/
 find -name index*
 ```
 
-### Searches user home directory 
+### Searches user home directory
 ```
 find ~/ -name index*
 ```
 
-### Search all directories 
+### Search all directories
 ```
 find / -name index
 ```
@@ -49,9 +49,11 @@ cat /etc/issue
 ```
 
 ### Linux distro/distribution and system version
+
 ```
 cat /etc/*-release
 ```
+**Note:** this one doesn't work on OSX.
 
 ### Display file system
 ```
