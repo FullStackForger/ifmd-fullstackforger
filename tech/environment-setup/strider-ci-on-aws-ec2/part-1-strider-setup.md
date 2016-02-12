@@ -1,4 +1,4 @@
-# Setting up strider CI server
+# Part 1: Strider Setup
 
 
 ## Prequisites
