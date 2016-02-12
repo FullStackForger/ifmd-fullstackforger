@@ -73,40 +73,6 @@ iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 30
 > Source: http://stackoverflow.com/a/16573737
 
 
-## Prepare GITHUB
-
-Before you start using Strider in production with Github, you have to:
-
-### Public github email
-
-Public email is required (if you don't want to do it permanently you can undo it once you done with setup)
-
-**Important:** there are 2 places you can do it. The one you after is changing:
-`profile > public email > Don't show my email` to address you going to use from your CI account.
-
-### Github user config
-
-Configure git username and email locally
-```
-git config --global user.name your username
-git config --global user.name youremail@gmail.com
-```
-
-**Note:** even though CI server doesn't push anything back it might be good idea to set up separate github account for deployments
-
-### App registration
-
-
-Register your application following instructions from registration page.
-When you get to callback address, use something like:
-```
-http://localhost:3000/auth/github/callback
-```
-**Note: ** Remember to replace `localhost:3000` with your CI server url address. Keep page open, you will use App Client ID and App Client Secret in a minute.
-
-**Note:** This step is not required if you run strider locally
-
-
 ## pm2
 
 PM2 is great process manager with awesome logging capabilities.
@@ -119,21 +85,18 @@ npm install -g pm2
 
 ### Start strider with pm2
 
+<!--
 SERVER_NAME="http://ci.indieforger.com" \
 STRIDER_CLONE_DEST="/home/ubuntu/strider-builds/" \
 PLUGIN_GITHUB_APP_ID="a79197d1586cfeaefd5c" \
 PLUGIN_GITHUB_APP_SECRET="c83b937c527de075ef80eadb1cec442b65429eb8" \
 pm2 start strider
+-->
 
 ```bash
+NODE_ENV="production" \
 SERVER_NAME="http://ci.indieforger.com" \
 STRIDER_CLONE_DEST="/home/ubuntu/strider-builds/" \
-PLUGIN_GITHUB_APP_ID="your_app_client_id" \
-PLUGIN_GITHUB_APP_SECRET="your_app_client_secret" \
-SMTP_HOST="" \
-SMTP_PORT="" \
-SMTP_USER="" \
-SMTP_PASS="" \
 pm2 strider    
 ```
 

@@ -29,7 +29,7 @@ Just pick and add one.
 
 ### Access configuration
 
-As described in [ssh from one ec2 to another](../../aws/how-to-ssh-from-one-aws-ec2-instance-to-another) there is more than one way to configure ssh access. Strider as of now doesn't support .pem key based authentication. Instead it generates SSH keys allowing SSH based deployment. We will use those.
+As described in [how to ssh from one ec2 instance to another](../../aws/how-to-ssh-from-one-aws-ec2-instance-to-another) there is more than one way to configure ssh access. Strider as of now doesn't support .pem key based authentication. Instead it generates SSH keys allowing SSH based deployment. We will use those.
 
 #### Server setup
 
@@ -61,12 +61,16 @@ Log in as `strider`
 sudo su strider
 ```
 
-Then run
+Then run bellow commands to setup npm
 ```
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 printf "\nexport PATH=~/.npm-global/bin:$PATH\n" >> ~/.profile && source ~/.profile
+```
 
+And install required node packages
+```
+npm install -g npm node-gyp
 ```
 
 That's it for now but stay logged in to App Server for now, we will come back to it in a moment.
@@ -90,7 +94,15 @@ Then, drag SSH-Deploy from Available Plugins to Active Plugins. It will enable a
 
 ### Configuration
 
+#### SSH keys
+
 In this step you have to copy Public SSH Key available from project settings page and paste it into `/home/strider/.ssh/authorized_keys`, hence earlier, I asked you to stay logged in to your App Server.
+
+####
+
+## Deploy
+
+If everything went ok you should be able to deploy to App Server with one click.
 
 
 ## Great sources
