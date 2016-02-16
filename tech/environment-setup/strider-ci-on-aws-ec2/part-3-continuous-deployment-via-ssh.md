@@ -35,8 +35,14 @@ As described in [how to ssh from one ec2 instance to another](../../aws/how-to-s
 
 Lets start with configuring application server, so first ssh to app server using .pem key.
 Then reuse script from part 1 to setup node environment with some dependencies.
+
 ```
 curl -L https://gist.githubusercontent.com/indieforger/20e345cf9dff308a7392/raw/setup-node-webserver.sh | bash
+```
+
+Install MongoDB if needed
+```
+curl -L https://gist.githubusercontent.com/indieforger/20e345cf9dff308a7392/raw/install-mongodb.sh | bash
 ```
 
 #### Deployment user

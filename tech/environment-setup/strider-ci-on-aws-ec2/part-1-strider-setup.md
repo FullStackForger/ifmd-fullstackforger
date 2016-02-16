@@ -13,10 +13,15 @@ You can check host name running `hostname` bash command.
 
 ### Installing system packages
 
-Script will install gcc compilers, node, update npm, install git and mongodb
+Script will install gcc compilers, node, update npm and install git
 
 ```
 curl -L https://gist.githubusercontent.com/indieforger/20e345cf9dff308a7392/raw/setup-node-webserver.sh | bash
+```
+
+Install MongoDB
+```
+curl -L https://gist.githubusercontent.com/indieforger/20e345cf9dff308a7392/raw/install-mongodb.sh | bash
 ```
 
 ### Installing strider
