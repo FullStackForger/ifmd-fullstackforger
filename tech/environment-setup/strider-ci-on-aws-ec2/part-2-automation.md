@@ -53,4 +53,6 @@ Remember to run `pm2 save` to persist configuration.
 
 Navigate to your project settings. In my case it would be `https://github.com/indieforger/micro-pack/settings`. Then open `Webhooks & services` tab and you will see that Strider already created webhook for the repository, when you add it to your CI projects.
 
+<!-- todo: image -->
+
 Every time you push committed changes to remote Github will notify CI server and Strider will run tests and attempt to deploy application to the App Server.
