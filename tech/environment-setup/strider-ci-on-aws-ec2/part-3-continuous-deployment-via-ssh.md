@@ -104,7 +104,6 @@ Then, drag SSH-Deploy from Available Plugins to Active Plugins. It will enable a
 
 In this step you have to copy Public SSH Key available from project settings page and paste it into `/home/strider/.ssh/authorized_keys`, hence earlier, I asked you to stay logged in to your App Server.
 
-####
 
 ## Deploy
 
