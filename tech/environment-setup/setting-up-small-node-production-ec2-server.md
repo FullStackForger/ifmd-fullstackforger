@@ -97,16 +97,23 @@ respawn limit 10 5
 
 limit nofile 4096 4096
 
-setcap 'cap_net_bind_service=+ep' $program
-
-pre-start script    
-    setcap 'cap_net_bind_service=+ep' /home/caddy/bin/caddy
-end script
-
 script
-    /home/caddy/bin/caddy -conf="/home/caddy/www/Caddyfile"    
+    /home/caddy/bin/caddy -conf="/home/caddy/www/Caddyfile"
 end script
 ```
+
+**Note:** To make it work you also have to edit Cadyfile, specifying setting `root` directive to folder root, eg:
+```
+localhost:80 test.indieforger.com:80 {
+  root  /home/caddy/www
+}
+```
+
+Sources:
+https://denbeke.be/blog/servers/running-caddy-server-as-a-service/
+https://github.com/mholt/caddy/issues/388
+https://github.com/jhillyerd/inbucket/blob/master/etc/ubuntu-12/inbucket-upstart.conf
+
 
 ### NPM
 
