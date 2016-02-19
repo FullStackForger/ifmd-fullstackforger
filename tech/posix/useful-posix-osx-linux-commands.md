@@ -24,6 +24,47 @@ find ~/ -name index*
 find / -name index
 ```
 
+### Find files and archive them
+
+```
+find /path/to/files -name "*.ext" -type f -exec tar -czf archive.tar.z {} \;
+```
+
+### Find files and archive them individually
+```
+find /path/to/files -name "*.ext" -type f -exec tar -czf {}.tar.gz {} \;
+```
+
+
+### Find files, archive first and then delete them
+```
+find /path/to/files -name "*.ext" -type f -exec tar -czf archive.tar.z {} \; -exec rm {} \;
+```
+
+## Archiving
+
+### Create tar archive from files foo and bar
+```
+tar -cf archive.tar foo bar
+```
+
+### Create tar.gz archive from path dir
+```
+tar -czvf archive.tar.gz ./path
+```
+
+### List all files in archive.tar verbosely
+```
+tar -tvf archive.tar
+```
+
+# Extract all files from archive.tar
+```
+tar -xf archive.tar
+```
+
+
+
 ## Privileges
 
 ### Recursive changing privileges
