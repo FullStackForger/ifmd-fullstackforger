@@ -104,7 +104,7 @@ If everything went ok you should be able to deploy to App Server with one click.
 Go ahead and deploy your project.
 
 You will see all the output in the deployment console.
-If you want to verify files have been deployed ssh to app server and check `/home/users/strider` directory. Project build should be there.
+If you want to verify deployed files manually, ssh to app server and check `/home/users/strider` directory. Project build should be there.
 
 ## What next
 

@@ -103,8 +103,9 @@ end script
 ```
 
 **Note:** To make it work you also have to edit Cadyfile, specifying setting `root` directive to folder root, eg:
+
 ```
-localhost:80 test.indieforger.com:80 {
+localhost:80 test.yourdomain.com:80 {
   root  /home/caddy/www
 }
 ```
@@ -113,13 +114,3 @@ Sources:
 https://denbeke.be/blog/servers/running-caddy-server-as-a-service/
 https://github.com/mholt/caddy/issues/388
 https://github.com/jhillyerd/inbucket/blob/master/etc/ubuntu-12/inbucket-upstart.conf
-
-
-### NPM
-
-Execute bellow commands to setup npm
-```
-mkdir ~/.npm-global
-npm config set prefix '~/.npm-global'
-printf "\nexport PATH=~/.npm-global/bin:$PATH\n" >> ~/.profile && source ~/.profile
-```
