@@ -9,7 +9,7 @@ Here are some notes I took down after watching [Is Early Access Right for You?](
 
 ## Developer (yours) expectations from the game
 - Test the idea - but remember Early Access is not free testing platform. Broken version can kill the project. DON'T deliver before game is ready to play
-- Get feedback. 
+- Get feedback.
 - Start dialog with community.
 - Find community advocates.
 - Fund rest of the development.
@@ -23,3 +23,9 @@ Here are some notes I took down after watching [Is Early Access Right for You?](
 ### Content creation (modding)
 - Consider talking to Unity3D or Unreal Engine or any other game engine producer. Perhaps they would like to provide some support for additional free publicity.
 - Prison Architect is great example of delivering a game as a ecosystem that then can be extended with new simulation and tested by players how that influences the whole environment.
+
+
+<!-- todo: expand based on:
+http://gamasutra.com/blogs/JoshBycer/20160217/265921/Getting_the_Most_out_of_Early_Access.php
+
+ -->
