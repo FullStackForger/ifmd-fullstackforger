@@ -103,7 +103,8 @@ angular
 
 ### Referencing module
 
-Modules can be retrieved by calling `module('moduleName')` without second parameter. In order to do so module has to be defined first, otherwise method will throw an error.
+Modules can be retrieved by calling `module('moduleName')` without second parameter.
+In order to do so module has to be defined first, otherwise method will throw an error.
 
 ```js
 var myApp = angular.module('myApp')
@@ -194,12 +195,12 @@ Method registers service with service recipe.
 ```js
 angular
   .module('myApp')
-  .service('myService', myService)
+  .service('myService', MyServiceConstructor)
 ```
 
 ##### `provider()`
 
-Method registers provider with service recipe.
+Method registers service with service recipe.
 
 ```js
 angular
@@ -220,7 +221,7 @@ angular
 
 #### Configuration block
 
-Configuration method uses provider injector to deliver **Injectable providers**.
+Configuration method uses provider `$injector` to deliver **Injectable providers**.
 Provider configuration is available only from the `config()` method context.
 You can call `config()` method more than once per module.
 
@@ -230,7 +231,6 @@ angular
   .config(function(/* injectable providers */) {
     // provider configuration
   })
-
 ```
 
 #### Run block
@@ -240,7 +240,7 @@ angular
 ```js
 .run(function(/*injectables instances */) { // instance-injector
   // run block
-});
+})
 ```
 
 > Run block is the code executed to kickstart the application. It is executed once after all of the services have been configured and the injector has been created.
