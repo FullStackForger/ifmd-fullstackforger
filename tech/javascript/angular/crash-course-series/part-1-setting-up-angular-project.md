@@ -4,15 +4,25 @@
 
 Angular is an enhanced HTML for web apps.
 
+Angular is a framework allowing developer to construct application in a [declarative](https://en.wikipedia.org/wiki/Declarative_programming) manner.
+It automates number of tedious tasks:
+- application initialization / bootstrap
+- DOM manipulation
+- callback registration
+- populating views with data
+
+Source: (Angular Introduction](https://docs.angularjs.org/guide/introduction)
+
 ## Keeping up to date with AngularJS
 
-Checkout official [angularjs.org](https://angularjs.org/) site for framework overview, [tutorial](https://docs.angularjs.org/tutorial), [developer guide](https://docs.angularjs.org/guide), [API docs](https://docs.angularjs.org/api) and more.
+- Checkout official [angularjs.org](https://angularjs.org/) site for framework overview, [tutorial](https://docs.angularjs.org/tutorial), [developer guide](https://docs.angularjs.org/guide), [API docs](https://docs.angularjs.org/api) and more.
+- Read [angularjs.blogspot.co.uk]( http://angularjs.blogspot.co.uk/) - official AngularJS blog to get fresh updates.
+- On Twitter follow official [AngularJS](https://twitter.com/angularjs) channel for updates.
+- Follow [IndieForger](https://github.com/indieforger) on github for JS full stack code examples.
 
-Read [angularjs.blogspot.co.uk](http://angularjs.blogspot.co.uk/) - official AngularJS blog to get fresh updates.
+## Project setup
 
-On Twitter follow official [AngularJS](https://twitter.com/angularjs) channel for updates.
-
-## Top level directory structure
+### Top level directory structure
 
 ```
 mkdir app       # production code
@@ -20,17 +30,17 @@ mkdir test      # test code
 mkdir dist      # distribution code
 ```
 
-## Git setup
+### Git configuration
 
-Either `git init` or `git clone` if you start from scratch
+Either `git clone` Angular [seed](https://github.com/angular/angular-seed) application or `git init` if you start from scratch.
 
-## NPM and packages
+### NPM and packages
 ```
 npm init
 npm install -g bower
 ```
 
-### Bower
+#### Bower
 ```
 bower init
 bower install angular --save
@@ -42,7 +52,7 @@ Add `bower_components` to `.gitignore`.
 
 Check [official docs](http://bower.io/docs/config/) to see how to modify default bower configuration.
 
-### Karma
+#### Karma
 ```
 npm install -g karma            # installed for cli convenience
 npm install karma --save-dev
