@@ -1,6 +1,6 @@
 # The art of making right decisions – stay calm and take it easy
 
-Just couple days ago my good friend posted on her Facebook wall a interesting quote:
+Just couple days ago my good friend posted on her Facebook wall an interesting quote:
 > It’s easier to stay awake till 6am, that to wake up at 6am.
 
 I was deeply moved. Damn right it is, isn't it! Why is that though?
@@ -11,7 +11,7 @@ Hold on but what are we aiming at here?
 
 Well… Let's suppose it is fine to stay up the whole night once in a blue moon. From time to time, it’s fine to take 6 hours walk home because last train is gone. It is alright to have bad day every now and then, be confused or lost in life for few days.
 
-However, if most of the time you think to yourself something like "oh no, why again?" or are depressed and mixed up on daily basis you, well...  
+However, if most of the time you think to yourself something like "oh no, why again?" or are depressed and mixed up on daily basis, well...  
 You might want to take a weekend off or perhaps dedicate short holiday (being on your) to actually answer "why again" question.
 
 As kids we ask "why" at least few times every minute, like little "why" machineguns. We do ask less "why"-s while growing up but and as we enter adulthood this number drastically reduces.
@@ -32,7 +32,7 @@ I have no diplomas, no degrees and writing about asking questions as a gold reme
 
 But what I can tell you for a fact is, in order to find those answers you should have calm mind and try to be objective. You might seek advice from others, friends, family or perhaps therapist but the end decision is always yours. I have been there myself so many times that, trust me, I know exactly what I am talking about. With anger bursting through my chest, the tears pouring off my face, out of breath, obsessed with work, confused about life, sleeping 3 – 4 hours every 2 – 3 days and feeling like screeming, every time something fails – I know exactly what I am talking about. 3 years ago I was different person and I never want to be that person again. I am not saying my life is perfect. I am not saying all my issues are gone. However, I was lucky enough to realize that because of lack of balance and lack of plan I was going nowhere.
 
-I heard recently from someone much younger than me (but much more educated) that I should meditate before trying to answer any important life question. I don’t really do meditation, at least not in a exact way sense. On the other hand, I do understand why it is helpful. In order to make the right decision and not regret it in the future you have no choice but to calm down and push away emotions. I would suggest that you try different methods and activities to find way that suits you best. Here are few that work for me.
+I heard recently from someone much younger than me (but much more educated) that I should meditate before trying to answer any important life question. I don’t really do meditation, at least not in a exact manner. On the other hand, I do understand why it is helpful. In order to make the right decision and not regret it in the future you have no choice but to calm down and push away emotions. I would suggest that you try different methods and activities to find way that suits you best. Here are few that work for me.
 
 ## Breathing / meditation
 
@@ -40,16 +40,16 @@ I have done some marshal arts in the past and I think have forgotten most of it 
 
 ## Planning
 
-I wasn’t able to sleep the other night. After 2 hours of constantly battling my own thoughts I decided to come downstairs and switched on PC. Couldn’t decide what to do at first. My head was full of thoughts and I was angry with myself past few days because couldn’t accomplish tight deadline in my current project. I was also little disturbed because of idea of relocating to India ( another long story). I spent few hours in open source LibreOffice Draw application drawing "Plan of action" chart. After getting everything out of my head I laid down and slept peacefully.
-Consensus? Plan! Planning helps to get things out of your head onto the paper.
+I wasn’t able to sleep the other night. After 2 hours of constantly battling my own thoughts I decided to come downstairs and switched on PC. At first, couldn’t decide what it is exactly that I want to do. My head was full of thoughts and I was angry with myself past few days because couldn’t accomplish tight deadline in my current project. I was also little disturbed because of idea of relocating to India ( another long story). I spent few hours in open source LibreOffice Draw application drawing "Plan of action" chart. After getting everything out of my head I laid down and slept peacefully.
+Consensus? Plan! And plan on paper or a screen. It helps to get things out of your head.
 
 ## Talking / venting
 
-Not long ago my  (ex)fiancee told me that after few years together she learned to stay calm while I am venting after work. As it often happens I tend to become really miserable every time I work for someone. Always angry, frustrated and disappointed in myself. After coming home she is the first person I talk to and obviously to get this whole frustration and disappointment out, complain and moan. It doesn’t last long but I just have to get all this emotions out. In the past it did caused unnecessary pressure but now it looks more like a funny 10 minutes stand up sketch, after which everything comes back to normal. It is important to find someone you can vent to and as important to realize when someone is venting to avoid random arguments.
+Not long ago my ex told me that after few years together she learned to stay calm while I am venting after work. As it often happens I tend to become really miserable every time I work for someone. Always angry, frustrated and disappointed in myself. After coming home she is the first person I talk to and obviously, from time to time, to get this whole frustration and disappointment out, I complain "a bit". It doesn’t last long but I just have to get all this emotions out. In the past it did caused unnecessary pressure but now it looks more like a funny 10 minutes stand up sketch, after which everything comes back to normal. It is important to find someone you can "vent" to and as important to realize when someone is "venting" to avoid random arguments.
 
 ## Shouting / screaming
 
-Not often but it does happens that I am so extremely angry that I feel like my body is going to explode. If you have a partner or a job that makes you cry,  (change it) you probably know what I am talking about here. If you want to scream... scream! It does help. Try to not shout at other people, that certainly might be more harmful than helpful. Find a place where you can screaming/shout. There was a time I have almost lost my voice while driving - yes, I was alone in the car. Again… not a solution to a problem but helps to get the emotions out so you can find one.
+Not often but it does happens that I am so extremely angry that I feel like my body is going to explode. If you have a partner or a job that makes you cry,  (change it) you probably know what I am talking about here. If you want to scream... scream! It does help. Try to not shout at other people though, that certainly might be more harmful than helpful. Find a place where you can make some noise. There was a time I have almost lost my voice while driving - yes, I was alone in the car. Again… not a solution to a problem but helps to get the emotions out so you can find one.
 
 ## Writing
 
