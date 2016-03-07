@@ -2,17 +2,10 @@
 
 This chapter will walk you through using web hooks to automate Strider deployments. That setup will allow Github to ping Strider server every time new commits are pushed to a project repository. Strider then can run tests and deploy apps to target environments.
 
-## Prepare GITHUB
-
+## Git setup
 Before you start using Strider with Github or Bitbucket, you have to do couple of things.
 
-### Public github email
-
-Public email is required so log into Github and navigate to `profile > public email` and change `Don't show my email` to address you setup in Strider CI account.
-
-**Note:** if you don't like keeping your email public, you can undo it once you Github Strider setup is complete.
-
-### Github user config
+### GIT user config
 
 Configure git username and email locally
 ```
@@ -21,6 +14,14 @@ git config --global user.name youremail@gmail.com
 ```
 
 **Note:** even though CI server doesn't push anything back it might be good idea to set up separate github account for deployments.
+
+## Github Webhooks
+
+### Public github email
+
+Public email is required so log into Github and navigate to `profile > public email` and change `Don't show my email` to address you setup in Strider CI account.
+
+**Note:** if you don't like keeping your email public, you can undo it once you Github Strider setup is complete.
 
 ### App registration
 
@@ -53,7 +54,7 @@ pm2 start strider
 
 Remember to run `pm2 save` to persist configuration.
 
-## Github Webhooks
+### Verification
 
 Open strider ci app in your browser. Log in and add one of the GIT project to your deployment projects. Once you have done that you can go back to Github.
 
@@ -62,3 +63,81 @@ Navigate to your project settings. In my case it would be `https://github.com/yo
 <!-- todo: image -->
 
 From now on, every time you push committed changes to remote, Github will notify CI server and Strider will run tests and attempt to deploy application to the App Server.
+
+
+## Bitbucket Webhooks
+
+Bitbucket process is very similar with, the only change you will have to make is update environment variables. So if you use both Bitbucket and Github startup script would look like below.
+
+If your server runs on address other than localhost:3000, set it via environment variable `SERVER_NAME`.
+
+```bash
+SERVER_NAME="https://appxample.com" npm start
+```
+
+## Creating your own bitbucket app
+
+Open bitbucket settings page and navigate to `oauth` tab. You can also do it directly via url: `https://bitbucket.org/account/user/[your-username]/api`. Then click `Addconsumer`.
+
+Use `http://ci.your-server-server.com/auth/bitbucket/callback`
+
+http://ci.indieforger.com/auth/github/callback
+
+Then set the env variables `PLUGIN_BITBUCKET_APP_KEY` and
+`PLUGIN_BITBUCKET_APP_SECRET` to the values given you.
+
+```
+https://ci.indieforger.com/auth/github/callback
+https://ci.indieforger.com/auth/bitbucket/callback
+
+NODE_ENV="production" \
+SERVER_NAME="https://ci.indieforger.com" \
+STRIDER_CLONE_DEST="/home/ubuntu/strider-builds/" \
+PLUGIN_BITBUCKET_APP_KEY="JKqDBM6NekxG7PV7W6" \
+PLUGIN_BITBUCKET_APP_SECRET="HXjXK3m7W3kXzvHPb6u2VjhqwPRtaGRX" \
+PLUGIN_GITHUB_APP_ID="a79197d1586cfeaefd5c" \
+PLUGIN_GITHUB_APP_SECRET="8b0b33c6d6ffc491852bfa044d34ef35e9444ec2" \
+pm2 start strider
+```
+
+```
+# blog
+
+# ----------------------------------------------
+# Note
+# ----------------------------------------------
+# No tests needed.
+# *.md docs are redeployed upon CVS update.
+# ----------------------------------------------
+
+source ~/.profile
+mkdir -p content
+rm -Rf content/blog.indieforger.com.old
+mv content/blog.indieforger.com content/blog.indieforger.com.old
+mv indieforger_blog.indieforger.com content/blog.indieforger.com
+
+# (todo) restart blog
+```
+
+```
+# put your shell code here
+mkdir -p services
+mv services/micro-pack services/micro-pack-old
+mv indieforger_micro-pack services/micro-pack
+cd services/micro-pack
+npm install
+echo "all done!"
+```
+
+
+```bash
+NODE_ENV="production" \
+SERVER_NAME="http://ci.your-server-name.com" \
+STRIDER_CLONE_DEST="/home/ubuntu/strider-builds/" \
+PLUGIN_BITBUCKET_APP_KEY="your_app_client_id" \
+PLUGIN_BITBUCKET_APP_SECRET="your_app_client_secret" \
+PLUGIN_GITHUB_APP_ID="your_app_client_id" \
+PLUGIN_GITHUB_APP_SECRET="your_app_client_secret" \
+pm2 start strider
+```
+Remember to run `pm2 save` to persist configuration.
