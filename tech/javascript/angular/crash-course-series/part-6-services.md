@@ -81,8 +81,7 @@ provider and used to create service objects.
 **Service** is a singleton object created by a service factory.
 
 ### DI Diagram
-
-http://stepansuvorov.com/blog/2015/04/angularjs-concept-diagram/
+[angularjs-concept-diagram](http://stepansuvorov.com/blog/2015/04/angularjs-concept-diagram/)
 
 ## Service recipes
 
