@@ -86,50 +86,6 @@ http://ci.indieforger.com/auth/github/callback
 Then set the env variables `PLUGIN_BITBUCKET_APP_KEY` and
 `PLUGIN_BITBUCKET_APP_SECRET` to the values given you.
 
-```
-https://ci.indieforger.com/auth/github/callback
-https://ci.indieforger.com/auth/bitbucket/callback
-
-NODE_ENV="production" \
-SERVER_NAME="https://ci.indieforger.com" \
-STRIDER_CLONE_DEST="/home/ubuntu/strider-builds/" \
-PLUGIN_BITBUCKET_APP_KEY="JKqDBM6NekxG7PV7W6" \
-PLUGIN_BITBUCKET_APP_SECRET="HXjXK3m7W3kXzvHPb6u2VjhqwPRtaGRX" \
-PLUGIN_GITHUB_APP_ID="a79197d1586cfeaefd5c" \
-PLUGIN_GITHUB_APP_SECRET="8b0b33c6d6ffc491852bfa044d34ef35e9444ec2" \
-pm2 start strider
-```
-
-```
-# blog
-
-# ----------------------------------------------
-# Note
-# ----------------------------------------------
-# No tests needed.
-# *.md docs are redeployed upon CVS update.
-# ----------------------------------------------
-
-source ~/.profile
-mkdir -p content
-rm -Rf content/blog.indieforger.com.old
-mv content/blog.indieforger.com content/blog.indieforger.com.old
-mv indieforger_blog.indieforger.com content/blog.indieforger.com
-
-# (todo) restart blog
-```
-
-```
-# put your shell code here
-mkdir -p services
-mv services/micro-pack services/micro-pack-old
-mv indieforger_micro-pack services/micro-pack
-cd services/micro-pack
-npm install
-echo "all done!"
-```
-
-
 ```bash
 NODE_ENV="production" \
 SERVER_NAME="http://ci.your-server-name.com" \
