@@ -1,4 +1,4 @@
-# Setting up small NodeJS production ec2 server
+# Setting up small ec2 Caddy production server for NodeJS 
 
 ## Requirements
 
