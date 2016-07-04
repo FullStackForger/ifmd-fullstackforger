@@ -57,10 +57,19 @@ curl ipecho.net/plain
 Find “Allow” section and edit it so it’ll look like:
 
 ```
-Allow 192.168.1.1
+Allow 91.120.100.90
 ```
 
 IF you are on dynamic IP you might want to remove or (better) comment that line. It will allow traffic on TinyProxy port from any IP address. Not the safest option but will work.
+
+Alternatively you can allow connections from group of IP addresses. So if your dynamic addresses are in range `91.*.*.*` use CIDR
+```
+91.0.0.0/8
+```
+or
+```
+91.120.0.0/16
+```
 
 You can also change mapped port in “port” section to lets say 8888
 
@@ -68,32 +77,39 @@ You can also change mapped port in “port” section to lets say 8888
 Port 8888
 ```
 
-### Connect to the server
-Connecting from IOS is not difficult but requires you to type below command into your terminal command line replacing user name, server address and path to your .pem file with the right data.
+### Prevent memory leaks
+
+Best way to prevent memory leaks is setting up a daily cron job.
+Use the command `crontab -e` to edit the crontab file and add the following line:
+
+```
+0 2 * * * /etc/init.d/tinyproxy restart
+```
+
+### Proxy-ing a browser
+
+To configure any browser, find connection settings and select `use proxy`.
+You have two choices here.
+* If your server allows traffic on the port `8888` you can use server IP address and the port.
+* If you don't want to open additional port on the server you can use `localhost`  tunnel to the proxy.
+
+<!-- ![Firefox configuration settings](http://indieforger.com/wp-content/uploads/2016/02/Firefox-proxy-setup.png) -->
+
+### Tunnel from POSIX operating system
+
+Connecting from POSIX systems is not difficult but requires you to type below command into your terminal command line replacing user name, server address and path to your .pem file. Bellow command will create a tunnel to EC2 server allowing to use local port `666` to connect to remote port `8888`.
 
 ```
 sudo ssh ec2-user@ec2-user@ec2-xxx-xx-xxxx-xx -i ~/.ssh/aws_key.pem -L 666:localhost:8888 -N
 ```
 
-Best will be to create alias using your .bash_profile file, so open it with your favourite terminal editor like pico
-
-```
-vim ~/.bash_profile
-```
-
-And paste below line aliasing above command to a simpler one like  proxystart
+Additionally you can create permanent alias. Add below line to `.bash_profile` file.
 
 ```
 alias proxystart='ssh -L 3128:localhost:8888 -N -i ~/.ssh/aws_key.pem ec2-user@ec2-xxx-xx-xxxx-xx &'
 ```
 
-Re-open terminal and you will be able to start your proxy connection by typing proxy straight from the command line. It will open connection and set the whole process in background.
+Now run `proxystart` from the terminal to open tunnel and move process in the background.
 
 **Note:**  
 Remember that it won’t autostart with your system, so if you reboot your mac you will have to start manually.
-
-### Configure your browser
-
-With proxy set up on your EC2 instance it is possible to configure your machine to connect to Internet with all protocols through the proxy however the best way might be just to set one browser to use tunnel and leave everything else as it is. Personally I am fan of that approach. I have few browser installed out of which only Firefox is connecting through web proxy. To configure that you would have to open Network settings in your browser and select ‘use proxy’ as shown below using port 3128 and address localhost as we already tried it. Here is the image how it could look for Firefox
-
-![Firefox configuration settings](http://indieforger.com/wp-content/uploads/2016/02/Firefox-proxy-setup.png)
