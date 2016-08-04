@@ -3,9 +3,9 @@
 ## Glue
 
 > Glue provides configuration based composition of hapi's Server object. Specifically it wraps
-> * server = new Hapi.Server(Options)
-> * one or more server.connection(Options)
-> * zero or more server.register(Plugin, Options)
+> * `server = new Hapi.Server(Options)`
+> * one or more `server.connection(Options)`
+> * zero or more `server.register(Plugin, Options)`
 > calling each based on the configuration generated from the Glue manifest.
 
 Github: [hapijs/glue](https://github.com/hapijs/glue)
