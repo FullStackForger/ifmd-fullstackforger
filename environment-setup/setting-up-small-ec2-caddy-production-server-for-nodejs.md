@@ -143,11 +143,26 @@ sudo sysctl -w net.ipv6.conf.all.disable_ipv6=0
 ### Certificate expired
 
 For some reason Caddy server doesn't always auto-refresh certificates.
-The best way to deal with the problem is to manually revoke certificate and then
-start the server as usual.
+The best way to deal with the problem is to manually revoke certificate.
+
+
+1. Stop caddy service
+```
+sudo service caddy stop
+```
+2. Tail logs for prseview of the progress
+```
+sudo tail /var/log/upstart/caddy.log -f
+```
+3. Revoke certificates
 ```
 caddy -revoke="expired.cert.domain.com"
 ```
+4. Start caddy server
+```
+sudo service start
+``` 
+
 
 ## Useful tools
 
