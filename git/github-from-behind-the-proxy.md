@@ -1,5 +1,5 @@
 
-# Github from behind firewall
+# Github from behind the proxy
 
 ## Problem
 
