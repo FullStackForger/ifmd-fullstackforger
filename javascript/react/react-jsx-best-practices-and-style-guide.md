@@ -38,9 +38,10 @@ project-folder/
       Home.jsx
       index.jsx
       Info.jsx
-    App.js
-    Header.js
-    Sidebar.js
+    App.jsx
+    Footer.jsx
+    Header.jsx
+    Sidebar.jsx
   containers/
     pages/
       index.jsx
@@ -94,8 +95,13 @@ more files you will have to add into corresponding directories.
 ```
 app/
   App.jsx
+  index.js
   appReducer.js
   routes.js
+layout/
+  index.js
+  Header.jsx
+  Footer.jsx
 pages/  
   Home.jsx
   HomeContainer.js        <-  could be merged with Home.jsx
