@@ -20,12 +20,12 @@ Dan Abramov's project allows to tweak React components in real time.
 
 ## Transpilers
 
-### babel
+### Babel
  Babel is a compiler for writing next generation JavaScript.
 * Homepage: [babeljs.io](https://babeljs.io/)
 * Github: [babel/babel](https://github.com/babel/babel)
 
-### traceur
+### Traceur
 Traceur is a JavaScript.next-to-JavaScript-of-today compiler.
 * Github: [google/traceur-compiler](https://github.com/google/traceur-compiler)
 
@@ -65,12 +65,12 @@ The TypeScript Handbook is a comprehensive guide to the TypeScript language
 
 ## Package managers
 
-### jspm
+### JSPM
 Frictionless browser package management
 It is a package manager for the SystemJS universal module loader, built on top of the dynamic ES6 module loader.
 * Homepage: [jspm.io](http://jspm.io/)
 
-### webpack
+### Webpack
 
 ## Resources
 
@@ -84,7 +84,12 @@ Github: [vhf/free-programming-books/javascript-frameworks-resources.md#react]htt
 
 ### Hello World with SystemJS, ECMAScript 6 and React
 Great tutorial with video from Medium.com: [hello-world-with-systemjs-ecmascript-6-and-react](https://medium.com/@daginge/hello-world-with-systemjs-ecmascript-6-and-react-7b53c642b771#.4s2inmqlm)
-## React Components
+
+## Awesome React Components
+
+Open Source Catalogues.
+* https://js.coach/
+* https://react.parts/native
 
 ### Drag & Drop management panel
 Github: [piotrwitek/react-dnd-dropzone](https://github.com/piotrwitek/react-dnd-dropzone)
