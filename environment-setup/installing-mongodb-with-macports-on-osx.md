@@ -2,8 +2,6 @@
 
 This is step by step guide on how to locally set up MongoDB on OS-X
 
-[Back to Wiki Homepage](Home.md)
-
 ## Install mongodb
 ```
 sudo port install mongodb
@@ -50,7 +48,7 @@ Mongo won't start after machine restart by default.
 If you want nginx auto start after machine reboot, first reate mongo launch daemon configuration downloading config gist `/Library/LaunchDaemons/org.mongodb.mongod.plist`
 
 ```
-sudo wget -O /Library/LaunchDaemons/org.mongodb.mongod.plist  https://gist.githubusercontent.com/rusticode/7d4786b617c53c963560/raw
+sudo wget -O /Library/LaunchDaemons/org.mongodb.mongod.plist  https://gist.githubusercontent.com/fullstackforger/b5ea73601cf61e6886c6570b6d3eb3bf/raw
 ```
 
 Now use `launchctl` to load mongo jobs.
@@ -64,7 +62,7 @@ sudo launchctl load -w /Library/LaunchDaemons/org.macports.mongodb.plist
 
 It will alow to run `mongostart` and `mongostop` to manually start and stop the mongodb instance.
 
-`sudo vim ~/.bash_profile` and append following script to the end of the file.
+`sudo vim ~/.profile` and append following script to the end of the file.
 
 ```
 # Custom mongostart scripts starting mongo with configuration file
@@ -83,7 +81,7 @@ mongostop_func () {
 alias mongostop="mongostop_func"
 ```
 
-Lastly execute `source ~/.bash_profile` from the terminal
+Lastly execute `source ~/.profile` from the terminal
 
 
 ## Start MongoDB 
