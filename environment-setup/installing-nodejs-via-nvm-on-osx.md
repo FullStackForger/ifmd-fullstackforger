@@ -10,8 +10,8 @@ git clone https://github.com/creationix/nvm.git ~/.nvm
 cd ~/.nvm
 git checkout `git describe --abbrev=0 --tags`
 source ~/.nvm/nvm.sh
-echo -e "\n# Activate nvm\nsource ~/.nvm/nvm.sh" >> ~/.bash_profile
-echo -e "\n# Bash completion for nvm\n[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion" >> ~/.bash_profile
+echo -e "\n# Activate nvm\nsource ~/.nvm/nvm.sh" >> ~/.profile
+echo -e "\n# Bash completion for nvm\n[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion" >> ~/.profile
 ```
 
 ## Installing node via NVM
@@ -19,8 +19,8 @@ echo -e "\n# Bash completion for nvm\n[[ -r $NVM_DIR/bash_completion ]] && . $NV
 Install and use node using NVM 
 
 ```
-nvm install 0.10.35
-nvm use v0.10.35
+nvm install node
+nvm use node
 ```
 
 ## Linking node (optional)
@@ -30,7 +30,7 @@ If you don't want to be forced to use `nvm use [node_version]` after every reboo
 ### Method 1: Updating _.bash\_profile_ or _.profile_
 
 ```
-echo -e "\n nvm use 0.10.35" >> ~/.bash_profile
+echo -e "\nnvm use node" >> ~/.profile
 ```
 
 ### Method 2: Linking npm and node binaries
@@ -49,10 +49,10 @@ if [[ "$NVM_BIN" ]]
 then
   com="$NVM_BIN/node"
 else
-  com="/Users/Marek/.nvm/v0.10.35/bin/node"
+  com="/Users/Mark/.nvm/v6.9.1/bin/node"
 fi
 $com $@
-#/Users/Marek/.nvm/v0.10.35/bin/node $@
+#/Users/Mark/.nvm/v6.9.1/bin/node $@
 ```
 
 Press `[esc]` to exit edit mode and type `:wq` to save and exit.
@@ -76,10 +76,10 @@ if [[ "$NVM_BIN" ]]
 then
   com="$NVM_BIN/npm"
 else
-  com="/Users/$USER/.nvm/v0.10.35/bin/npm"
+  com="/Users/$USER/.nvm/v6.9.1/bin/npm"
 fi
 $com $@
-#/Users/$USER/.nvm/v0.10.35/bin/npm $@
+#/Users/$USER/.nvm/v6.9.1bin/npm $@
 ```
 
 Press `[esc]` to exit edit mode and type `:wq` to save and exit.

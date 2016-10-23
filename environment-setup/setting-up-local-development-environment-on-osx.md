@@ -10,7 +10,7 @@ Follow below instruction to display Bash colors schemes, useful aliases and curr
 
 From terminal open 
 ```
-vim ~/.bash_profile
+vim ~/.profile
 ```
 
 Press `[i]` for `editing` mode and paste below code.
@@ -123,10 +123,17 @@ Execute below code from the terminal.
 ```
 cd ~
 git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt
-echo -e "\n# Git bash color schemas"
-echo -e ""
-echo -e "source ~/.bash-git-prompt/gitprompt.sh" >> ~/.bash_profile
-source ~/.bash_profile
+```
+
+And add to your `.profile` file
+```
+# Git bash color schemas
+source ~/.bash-git-prompt/gitprompt.sh
+```
+
+Update bash.
+```
+source ~/.profile
 ```
 
 ### Git settings: aliases, color, core
@@ -150,7 +157,7 @@ git config --global alias.alias "config --get-regexp ^alias\." | sort
 
 ## NodeJS - installing node via .nvm
 
-Check [Installing node via NVM](./installing-nodejs-via-nvm-on-osx.md)
+Check [Installing node via NVM](./installing-nodejs-via-nvm-on-osx)
 
 
 ### Node Packages
@@ -167,7 +174,7 @@ Links do those npm packages
 
 ## MongoDB
 
-To insall MondoDB folllow [Installing MongoDB with MacPorts on OSX](installing-mongodb-with-macports-on-osx.md)
+To insall MondoDB folllow [Installing MongoDB with MacPorts on OSX](installing-mongodb-with-macports-on-osx)
 
 ## NginX
-To install NginX follow [Installing NginX on OSX with configuration for NodeJS](installing-nginx-on-osx-with-configuration-for-nodejs.md).
+To install NginX follow [Installing NginX on OSX with configuration for NodeJS](installing-nginx-on-osx-with-macports-for-nodejs).
