@@ -23,6 +23,18 @@ Set as executable
 sudo chmod 755 git-delete-all-tags
 ```
 
+## Delete all untracked files
+
+To check what files are going to be delted run:
+```
+git clean -n
+```
+
+To remove files run
+```
+git clean -f
+```
+
 ## Change modify commit author
 
 Changing commit author means updating user email and user name for particular
