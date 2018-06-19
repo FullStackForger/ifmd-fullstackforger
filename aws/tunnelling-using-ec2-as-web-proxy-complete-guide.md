@@ -65,7 +65,7 @@ curl ipecho.net/plain
 
 Edit config file
 ```
-vim /etc/tinyproxy/tinyproxy.conf
+vim /etc/tinyproxy.conf
 ```
 
 
